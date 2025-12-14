@@ -48,12 +48,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                     </div>
 
                     <div className="mt-8 pt-6 border-t border-gray-800 flex justify-between items-center">
-                        <button className="flex items-center space-x-2 text-[#D4A017] hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
+                        Comming Soon{/* <button className="flex items-center space-x-2 text-[#D4A017] hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
                             <Github size={16} /> <span>View Code</span>
                         </button>
                         <button className="flex items-center space-x-2 text-[#D4A017] hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
                             <ExternalLink size={16} /> <span>Live Demo</span>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>

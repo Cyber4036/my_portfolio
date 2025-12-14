@@ -19,12 +19,12 @@ export const PORTFOLIO_DATA = {
         },
         {
             category: "Data Science & AI",
-            tools: ["Python", "SQL", "Power BI", "DAX", "Pandas", "NumPy", "AWS", "Generative AI"],
+            tools: ["Python", "SQL", "Power BI", "DAX", "AWS", "Generative AI"], // "Pandas", "NumPy",
             icon: React.createElement(Brain, { size: 20 })
         },
         {
             category: "Tools & Cloud",
-            tools: ["Git", "AWS Cloud", "Oracle Cloud", "Linux", "Figma"],
+            tools: ["Git", "AWS Cloud", "Linux", "Figma"], //  "Oracle Cloud"
             icon: React.createElement(Terminal, { size: 20 })
         }
     ],
@@ -111,11 +111,11 @@ export const PORTFOLIO_DATA = {
         }
     ],
     contact: {
-        email: "archeraoda@gmail.com",
+        email: "manzcb4@outlook.com",
         phone: "+250 728 351 055",
         location: "Kigali, Rwanda",
         linkedin: "https://www.linkedin.com/in/arnaud-sibomana-b14a262a5",
-        github: "https://github.com",
+        github: "https://github.com/Cyber4036",
         portfolio: "https://yourportfolio.com"
     }
 };
