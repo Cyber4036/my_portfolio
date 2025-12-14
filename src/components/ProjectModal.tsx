@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { X, Github, ExternalLink } from 'lucide-react';
+import { X } from 'lucide-react'; // Github, ExternalLink
 
 interface Project {
     id: number;
