@@ -12,12 +12,12 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ icon, label, active, onClick }) => (
     <button
         onClick={onClick}
-        className={`flex items-center space-x-2 px-4 py-2 transition-all duration-300 group
+        className={`flex items-center space-x-2 px-7 py-2 transition-all duration-300 group
       ${active ? 'text-[#D4A017] border-l-2 border-[#D4A017]' : 'text-gray-400 hover:text-white'}
     `}
     >
         <span className="transform group-hover:scale-110 transition-transform">{icon}</span>
-        <span className="font-medium tracking-wide text-sm hidden md:block">{label}</span>
+        <span className="hidden">{label}</span>
     </button>
 );
 

@@ -76,20 +76,20 @@ const About: React.FC<AboutProps> = ({ aboutText, experience, education, skills 
                     </div>
 
                     {/* Skills Grid */}
-                    <div className="bg-[#1a1a1a] p-8 border border-[#2D2D2D] relative transform hover:translate-y-1 transition-transform duration-300 shadow-lg">
-                        <div className="absolute top-0 right-0 w-0 h-0 border-t-[50px] border-t-[#D4A017] border-l-[50px] border-l-transparent"></div>
-                        <h2 className="text-2xl font-bold mb-8 text-[#F4F4F0]">Technical Arsenal</h2>
+                    <div className="bg-[#1a1a1a] p-6 border border-[#2D2D2D] relative shadow-lg h-fit">
+                        <div className="absolute top-0 right-0 w-0 h-0 border-t-[30px] border-t-[#D4A017] border-l-[30px] border-l-transparent"></div>
+                        <h2 className="text-xl font-bold mb-6 text-[#F4F4F0] border-b border-[#333] pb-2">Technical Arsenal</h2>
 
-                        <div className="space-y-8">
+                        <div className="space-y-6">
                             {skills.map((skillGroup, idx) => (
                                 <div key={idx}>
-                                    <div className="flex items-center space-x-3 mb-4 text-[#D4A017]">
+                                    <div className="flex items-center space-x-2 mb-3 text-[#D4A017]">
                                         {skillGroup.icon}
-                                        <h3 className="font-semibold uppercase tracking-wider text-sm">{skillGroup.category}</h3>
+                                        <h3 className="font-semibold uppercase tracking-wider text-xs">{skillGroup.category}</h3>
                                     </div>
                                     <div className="flex flex-wrap gap-2">
                                         {skillGroup.tools.map((tool, tIdx) => (
-                                            <span key={tIdx} className="px-3 py-1 bg-[#2D2D2D] text-gray-300 text-sm border border-[#444] hover:border-[#F4F4F0] hover:text-white transition-colors cursor-default">
+                                            <span key={tIdx} className="px-2 py-1 bg-[#222] text-gray-300 text-xs border border-[#333] hover:border-[#F4F4F0] hover:text-white transition-colors cursor-default">
                                                 {tool}
                                             </span>
                                         ))}

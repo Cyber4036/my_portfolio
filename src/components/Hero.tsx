@@ -41,29 +41,23 @@ const Hero: React.FC<HeroProps> = ({ scrollTo, mounted, tagline }) => {
                     </div>
                 </div>
 
-                {/* Photo Container - Diamond-shaped Mask with Animations */}
+                {/* Photo Container - Square Frame */}
                 <div className={`order-1 lg:order-2 flex justify-center relative ${mounted ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}`}>
-                    <div className="w-64 h-64 md:w-96 md:h-96 relative">
-                        {/* Decorative Frames - Spinning */}
-                        <div className="absolute inset-0 border-2 border-[#8B2E2E] transform rotate-3 animate-spin-slow"></div>
-                        <div className="absolute inset-0 border-2 border-[#D4A017] transform -rotate-3 animate-spin-reverse-slow"></div>
+                    <div className="w-64 h-64 md:w-80 md:h-80 relative group">
+                        {/* Decorative Frames */}
+                        <div className="absolute inset-0 border-2 border-[#8B2E2E] translate-x-4 translate-y-4 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                        <div className="absolute inset-0 border-2 border-[#D4A017] -translate-x-4 -translate-y-4 transition-transform duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2"></div>
 
-                        {/* Image Mask - Diamond Shape */}
-                        <div className="absolute inset-8 bg-[#121212] overflow-hidden shadow-2xl z-10 
-                             transform rotate-45 border-4 border-[#2D2D2D]">
-
-                            {/* Placeholder for user image - Rotate back and scale up */}
+                        {/* Main Image Container */}
+                        <div className="absolute inset-0 bg-[#121212] overflow-hidden border border-[#2D2D2D] shadow-2xl relative z-10">
+                            <div className="absolute inset-0 bg-gray-900/20 z-20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
                             <img
                                 src={profilePic}
                                 alt="Profile"
-                                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 
-                            transform -rotate-45 scale-150 mix-blend-darken filter contrast-125"
+                                className="w-full h-90 object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-105"
                             />
-                        </div>
-
-                        {/* Geometric Accent */}
-                        <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-[#121212] border border-[#F4F4F0] flex items-center justify-center z-20">
-                            <div className="w-12 h-12 bg-[#8B2E2E] rotate-45 animate-pulse"></div>
+                            {/* Bottom Fade Gradient */}
+                            <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#121212] to-transparent pointer-events-none z-30"></div>
                         </div>
                     </div>
                 </div>
