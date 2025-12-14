@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Optional: If you have a JS config, load it explicitly [citation:1] */
+/* @config "./tailwind.config.js"; */
+
+/* Define your custom theme variables */
+@theme {
+  /* Your custom colors. The --color- prefix is correct for v4 [citation:5]. */
+  --color-imigongoRed: #A52A2A;
+  --color-imigongoBlack: #000000;
+  --color-imigongoEarth: #8B4513;
+  --color-imigongoWhite: #FFFFFF;
+
+  /* Example font override */
+  --font-family-sans: system-ui, sans-serif;
+}
+
+/* Custom utility for your project's container */
+@utility container-imigongo {
+  max-width: var(--breakpoint-7xl, 80rem); /* Uses a Tailwind CSS variable */
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* Custom dark mode variant (class-based) [citation:4] */
+@custom-variant dark (&:where(.dark, .dark *));
