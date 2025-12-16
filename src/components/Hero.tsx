@@ -2,6 +2,7 @@
 import React from 'react';
 import { ChevronRight, Download } from 'lucide-react';
 import profilePic from '../assets/profile.jpeg';
+import cvFile from '../assets/CV_2025-12-05_134641.pdf';
 
 interface HeroProps {
     scrollTo: (id: string) => void;
@@ -34,10 +35,14 @@ const Hero: React.FC<HeroProps> = ({ scrollTo, mounted, tagline }) => {
                             <span>View My Work</span>
                             <ChevronRight size={18} />
                         </button>
-                        <button className="border border-[#F4F4F0] text-[#F4F4F0] hover:bg-[#F4F4F0] hover:text-[#121212] px-8 py-3 font-bold flex items-center justify-center space-x-2 transition-colors duration-300 w-full sm:w-auto">
+                        <a
+                            href={cvFile}
+                            download="CV_2025-12-05_134641.pdf"
+                            className="border border-[#F4F4F0] text-[#F4F4F0] hover:bg-[#F4F4F0] hover:text-[#121212] px-8 py-3 font-bold flex items-center justify-center space-x-2 transition-colors duration-300 w-full sm:w-auto"
+                        >
                             <Download size={18} />
                             <span>Download CV</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
